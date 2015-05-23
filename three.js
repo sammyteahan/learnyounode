@@ -1,9 +1,15 @@
+/**
+ * Synchronous Approach
+ */
 var fs = require('fs'),
-    filename = process.argv[2];
+    file = process.argv[2],
+    buffer = fs.readFileSync(file),
+    fileContents = buffer.toString(),
+    fileLength = fileContents.split('\n');
+
+
 /**
  * Print line length of file
  */
-file = fs.readFile(filename, function(err, data) {
-  console.log(data.toString().split('\n').length - 1);
-});
+console.log(fileLength.length - 1);
 
