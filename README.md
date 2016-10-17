@@ -1,10 +1,10 @@
-## Zija API
+# Zija API
 ---
 
 #### Contents
 
 * [Authentication](#authentication)
-* [User Endpoints](#retrieve-user)
+* [User Endpoints](#user)
 * Cart Endpoints
 * Wishlist Endpoints
 * Products
@@ -17,7 +17,7 @@
 * **Version 1**
 
 
-#### Authentication
+## Authentication
 
 JSON Web Tokens (JWT) are used to lock down authentication for the shop. We are using [this](https://github.com/tymondesigns/jwt-auth/wiki) library to configure
 and create tokens for users. In order to authenticate with the API, a `POST` request is sent to `/auth/sign-in` with the email and password of the user. The
@@ -112,6 +112,8 @@ A boolean `success` key with a `message` of `Email exists` or `Email is unique`.
 
 A key of `No one is using this username` or `In Use`.
 
+## User
+---
 
 #### Retrieve user
 
